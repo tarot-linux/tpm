@@ -9,7 +9,8 @@
 
 // reads a packages contents and prints them out.
 
-void cleanPkg(char *pkgName) {
+void cleanPkg(char *pkgName) 
+{
 	remove(pkgName);
 }
 
@@ -44,7 +45,8 @@ void storePkg(char *packageName)
 
 
 // FULL PATH for the option. i.e /deps instead of deps.
-char *fetchFromGithub(char *pkgName, char *option) {
+char *fetchFromGithub(char *pkgName, char *option) 
+{
 	// this needs to be on the heap
 	char gitlink[512] = "https://raw.githubusercontent.com/tarot-linux/tarot-pkgs/main/"; 
 	strcat(gitlink, pkgName);
@@ -81,7 +83,8 @@ int downloadPkgInfo(char *pkgName, char *option)
 }
 
 
-void matchDependencies() {
+void matchDependencies() 
+{
 	FILE *fp;
 	int c;
 	char line[512];
@@ -97,7 +100,8 @@ void matchDependencies() {
 	fclose(fp);
 }
 
-void buildPkg(char *pkgName) {
+void buildPkg(char *pkgName) 
+{
 	chmod(pkgName, S_IRWXG);
 	char strbuff[512];
 	strcat(strbuff, "./");
