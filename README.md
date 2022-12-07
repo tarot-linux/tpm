@@ -1,2 +1,2 @@
 # tpm
-the tarot package manager
+the tarot package manager, rewritten in common lisp.
